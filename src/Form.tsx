@@ -73,6 +73,8 @@ const Form: React.FC = () => {
           Calcular IMC
         </button>
       </div>
+        <p className="mt-3 text-sm text-gray-400">*A sigla I.M.C. significa Índice de Massa Corporal</p>
+
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Seu IMC é de:</h2>
@@ -81,12 +83,12 @@ const Form: React.FC = () => {
           )}
           {classification && (
             <><p className="text-lg">{classification}</p><div className="mt-8">
-              <h2 className="text-xl font-bold mb-2">Classificação IMC</h2>
+              <h2 className="text-xl font-bold mb-2">Classificação</h2>
               <table className="min-w-full border border-gray-300">
                 <thead>
                   <tr className="bg-gray-200">
                     <th className="border px-4 py-2">Faixa de IMC</th>
-                    <th className="border px-4 py-2">Classificação</th>
+                    <th className="border px-4 py-2">Categoria</th>
                   </tr>
                 </thead>
                 <tbody>
